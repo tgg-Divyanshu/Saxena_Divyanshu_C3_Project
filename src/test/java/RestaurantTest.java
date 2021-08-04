@@ -74,6 +74,7 @@ class RestaurantTest {
     @Test
     public void order_value_should_reduce_cumulative_total_when_an_item_removed(){
         restaurantCreation();
+        menuList = restaurant.getMenu();
         int total = restaurant.getOrderValue(menuList);
         int afterTotal = menuList.get(1).getPrice();
         menuList.remove(1);
