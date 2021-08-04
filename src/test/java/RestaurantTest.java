@@ -2,11 +2,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class RestaurantTest {
     Restaurant restaurant;
+
+    //menuList variable acts as the menu selected by the user
+    List<Item> menuList = new ArrayList<Item>();
 
 
     public void restaurantCreation(){

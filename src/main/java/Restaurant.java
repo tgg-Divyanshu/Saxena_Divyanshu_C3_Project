@@ -15,6 +15,9 @@ public class Restaurant {
         this.location = location;
         this.openingTime = openingTime;
         this.closingTime = closingTime;
+        //default menu items
+        this.menu.add(new Item("Rajma",73));
+        this.menu.add(new Item("Panner Tikka",45));
     }
 
     public LocalTime getOpeningTime() { return openingTime; }
@@ -77,6 +80,14 @@ public class Restaurant {
 
     public String getName() {
         return name;
+    }
+
+    public int getOrderValue(List<Item> item){
+        int totalValue = 0;
+        for (Item myItem : item) {
+            totalValue += myItem.getPrice();
+        }
+        return totalValue;
     }
 
 }
